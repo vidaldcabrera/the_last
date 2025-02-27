@@ -32,17 +32,6 @@ print("""
     Pedro, assustado, sugere desviar da rota e seguir para um local mais silencioso. Já Marina prefere seguir a rota planejada.\n\tCabe a você, {inserir nome}, desempatar a decisão. O que você prefere?\n\t- Digite 1 para desviar da rota\n\t- Digite 2 para seguir o caminho planejado
 """)
 
-// declara variavel de decisao
-var decisao = readLine()
-var input_valido: Bool
-repeat {
-    input_valido = true
-    if decisao != "1" && decisao != "2" {
-        input_valido = false
-        print("Inválido! Por favor, insira o valor 1 ou 2.")
-        decisao = readLine()
-    } else {
-        input_valido = true
-    }
-    
-} while(input_valido == false)
+// Obtem decisao
+var decisao = confere_input()
+
