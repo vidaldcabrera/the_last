@@ -25,6 +25,7 @@ func capitulo_2(nome:String, escolha:String) {
         escolha_rota_desviada(nome: nome)
     } else {
         mantem_rota(nome:nome)
+        escolha_mesma_rota(nome: nome, escolha: escolha)
     }
     
 }
@@ -63,16 +64,30 @@ func escolha_rota_desviada(nome:String) {
 
 func mantem_rota(nome:String) {
     print("""
-        Com o sinal GPS fraco, vocês continuam a viagem segundo planejado. O Pedro, ainda assustado pela situação, repara numa árvore com marcas estranhas, parecem ser garras de algum animal, o que deixa todos eles arrepiados e em alerta.     PEDRO: “Jesus! Eu sabia que não era uma boa ideia! Olha aquela árvore ali, tem algum animal muito grande para cá”.
+        Com o sinal GPS fraco, vocês continuam a viagem segundo planejado. O Pedro, ainda assustado pela situação, repara numa árvore com marcas estranhas, parecem ser garras de algum animal, o que deixa todos eles arrepiados e em alerta.
+            PEDRO: “Jesus! Eu sabia que não era uma boa ideia! Olha aquela árvore ali, tem algum animal muito grande para cá”.
             MARINA: “Nossa. Mas não vai estar no nosso acampamento, vamos continuar e vai dar tudo certo.”
             Vocês seguem o caminho por mais um tempo, e o GPS para completamente de funcionar, mas já estavam próximos do seu destino. Você repara que passaram por uma arvore com aquelas marcas novamente.
             VOCE: “Gente…  Não parece a mesma arvore?
-            MARINA: “Não viaja, {fulano}, é só parecida.”
+            MARINA: “Não viaja, \(nome), é só parecida.”
             PEDRO: “Nossa, mas é até o mesmo formato! Onde a gente está? Estamos seguindo essa estrada reta a tempos e nada! Já era para termos chegado!”
             Vocês já estão a um tempo na estrada e já anoiteceu, sendo o farol do carro a única luz para se guiar, mas não resta tanto combustível no carro.
             MARINA: “Acho que podemos acampar por aqui mesmo. O espaço na floresta não é ruim, é para ter um rio próximo.”
-            PEDRO: “Tá maluca? Vamos chegar ao acampamento, pelo que vi antes no GPS, era só seguir essa estrada mesmo! Uma hora vamos chegar.”\n\t\t- Digite 1 para seguir para montar o acampamento onde estão\n\t\t- Digite 2 para seguir o caminho
+            PEDRO: “Tá maluca? Vamos chegar ao acampamento, pelo que vi antes no GPS, era só seguir essa estrada mesmo! Uma hora vamos chegar.”
+                - Digite 1 para montar o acampamento onde estão
+                - Digite 2 para seguir o caminho
     """)
+}
+
+func escolha_mesma_rota(nome:String, escolha:String) {
+    // se manter a mesma rota, decidir parar para acampar ou continuar rodando com o carro
+    var escolha = confere_input()
+    if escolha == "1" {
+        acampar_no_local(nome:nome)
+    } else {
+        continuar_rodando(nome:nome)
+    }
+    escolha = confere_input()
 }
 
 func ficar_parado(nome:String) {
@@ -87,4 +102,31 @@ func procurar_amigos(nome:String) {
         O frio já tomou conta, e um forte vento gelado apaga a fogueira. A iluminação torna-se bastante escassa. Você decide deixar o acampamento e ir procurar seus amigos. Já está tarde e você está preocupado com o estado deles, porém, a floresta é escura e está cheia de mistérios. Você decide subir em uma árvore e observar a floresta por cima.
         De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir?\n\t\t- Digite 1 para seguir para a caverna\n\t\t- Digite 2 para seguir para o farol
     """)
+}
+
+func acampar_no_local(nome:String) {
+    print("""
+        
+    Vocês começam montar o acampamento, pois estava escuro e frio. O Pedro decide usar uma lanterna e ir até um rio perto para buscar água. Passados uns 30 minutos da saída do Pedro, você e a Marina ficam preocupados pois ele ainda não voltou.
+    MARINA: ”\(nome), o Pedro ainda não voltou, não acha que deveríamos ir buscar ele?”
+    VOCE: “Você tem razão, Marina, mas a gente ainda não montou o acampamento, eu vou ficar aqui terminando de montar, você se importa de ir dar uma olhada? Talvez ele só esteja deitado sobre uma pedra descansando.”
+    MARINA: “Pode ser, \(nome).”
+    Você termina de montar o acampamento, porém, nenhum dos seus amigos voltou ainda e fica preocupado. Na distância, você consegue enxergar duas fontes de luz, uma proveniente de um farol e outra proveniente de uma caverna. A caverna, bastante luminosa, pelo que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir? \n\t\t- Digite 1 para seguir para a caverna \n\t\t- Digite 2 para seguir para o farol
+
+""")
+}
+
+func continuar_rodando(nome:String) {
+    print("""
+
+    Aproximadamente 30 minutos depois, você repara que o combustível do carro está acabando e comenta com seus amigos sobre.
+    VOCÊ: “Gente, o combustível está acabando, eu disse para a gente passar naquele posto antes de continuar o caminho. Devemos começar montar o acampamento, pois já está tarde.”
+    PEDRO: “De jeito nenhum, precisamos chegar num lugar seguro pelo menos, já esqueceram das marcas da árvore?”
+    MARINA: “Pelo amor de Deus Pedro, para de ser medroso, você tem medo até da sua própria sombra.”
+    Vocês decidem acampar perto da estrada, na esperança de alguém passar e pedir ajuda. Pedro, ainda com medo, começa dar voltas ao redor do acampamento, enquanto você e a Marina terminam de montar.
+    PEDRO:”Ai meu Deus, essa é a árvore das marcas, a gente veio justo acampar do lado. Esse lugar é muito estranho, devemos ir embora.”
+    VOCÊ:”Calma Pedro, tem muitas especies de animais inofensivos que fazem esse tipo de marcas, é um jeito de marcar território“
+    MARINA: “Ah, \(nome)! não foi uma boa ideia vir acampar com ele, só reclama, você esperava o que da floresta? Pipoca e chocolate? Vamos naquele rio perto buscar água enquanto \(nome) termina de montar o acampamento”
+    Passou mais de 30 minutos e nenhum sinal dos seus amigos, você, desesperado, pensa em sair buscar eles. De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir? \n\t\t- Digite 1 para seguir para a caverna \n\t\t- Digite 2 para seguir para o farol
+""")
 }
