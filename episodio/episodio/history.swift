@@ -17,7 +17,7 @@ func imprime_cap1(nome:String) {
     """)
     pula = readLine()!
     print("""
-        Pedro, assustado, sugere desviar da rota e seguir para um local mais silencioso. Já Marina prefere seguir a rota planejada.\n\tCabe a você, \(nome), desempatar a decisão. O que você prefere?\n\t\t- Digite 1 para desviar da rota\n\t\t- Digite 2 para seguir o caminho planejado
+        Pedro, assustado, sugere desviar da rota e seguir para um local mais silencioso. Já Marina prefere seguir a rota planejada.\n\tCabe a você, \(nome), desempatar a decisão. O que você prefere?\n\t\t- Digite 1 para desviar da rota 🛣\n\t\t- Digite 2 para seguir o caminho planejado 🗺
     """)
 }
 
@@ -48,7 +48,7 @@ func desvia_rota(nome:String) {
     """)
     pula = readLine()!
     print("""
-        Depois de uns 15 minutos, o sol já se pôs totalmente, a única iluminação que resta é a da Lua cheia e do fogo que você e Marina acenderam. Nenhum de seus amigos voltaram ainda e você começa a questionar se eles estão bem. Será melhor continuar vigiando o local caso eles apareçam, ou ir em busca deles?\n\t\t- Digite 1 para ficar parado\n\t\t- Digite 2 para procurar seus amigos
+        Depois de uns 15 minutos, o sol já se pôs totalmente, a única iluminação que resta é a da Lua cheia e do fogo que você e Marina acenderam. Nenhum de seus amigos voltaram ainda e você começa a questionar se eles estão bem. Será melhor continuar vigiando o local caso eles apareçam, ou ir em busca deles?\n\t\t- Digite 1 para ficar parado 📍\n\t\t- Digite 2 para procurar seus amigos 🔍
 """)
 }
 
@@ -88,7 +88,7 @@ func procurar_amigos(nome:String) {
     """)
     pula = readLine()!
     print("""
-        De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir?\n\t\t- Digite 1 para seguir para a caverna\n\t\t- Digite 2 para seguir para o farol
+        De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir?\n\t\t- Digite 1 para seguir para a caverna 🗿\n\t\t- Digite 2 para seguir para o farol 🗼
     """)
 }
 
@@ -111,8 +111,8 @@ func mantem_rota(nome:String) {
             Vocês já estão a um tempo na estrada e já anoiteceu, sendo o farol do carro a única luz para se guiar, mas não resta tanto combustível no carro.
             MARINA: “Acho que podemos acampar por aqui mesmo. O espaço na floresta não é ruim, é para ter um rio próximo.”
             PEDRO: “Tá maluca? Vamos chegar ao acampamento, pelo que vi antes no GPS, era só seguir essa estrada mesmo! Uma hora vamos chegar.”
-                - Digite 1 para montar o acampamento onde estão
-                - Digite 2 para seguir o caminho
+                - Digite 1 para montar o acampamento onde estão 🏕
+                - Digite 2 para seguir o caminho 🛣
     """)
 }
 
@@ -144,7 +144,7 @@ func acampar_no_local(nome:String) {
     """)
     pula = readLine()!
     print("""
-    Você termina de montar o acampamento, porém, nenhum dos seus amigos voltou ainda e fica preocupado. Na distância, você consegue enxergar duas fontes de luz, uma proveniente de um farol e outra proveniente de uma caverna. A caverna, bastante luminosa, pelo que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir? \n\t\t- Digite 1 para seguir para a caverna \n\t\t- Digite 2 para seguir para o farol
+    Você termina de montar o acampamento, porém, nenhum dos seus amigos voltou ainda e fica preocupado. Na distância, você consegue enxergar duas fontes de luz, uma proveniente de um farol e outra proveniente de uma caverna. A caverna, bastante luminosa, pelo que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir? \n\t\t- Digite 1 para seguir para a caverna 🗿 \n\t\t- Digite 2 para seguir para o farol 🗼
 
 """)
 }
@@ -166,7 +166,7 @@ func continuar_rodando(nome:String) {
     """)
     pula = readLine()!
     print("""
-    Passou mais de 30 minutos e nenhum sinal dos seus amigos, você, desesperado, pensa em sair buscar eles. De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir? \n\t\t- Digite 1 para seguir para a caverna \n\t\t- Digite 2 para seguir para o farol
+    Passou mais de 30 minutos e nenhum sinal dos seus amigos, você, desesperado, pensa em sair buscar eles. De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir? \n\t\t- Digite 1 para seguir para a caverna 🗿 \n\t\t- Digite 2 para seguir para o farol 🗼
     """)
 }
 
@@ -198,8 +198,8 @@ func farol_bom() {
     pula = readLine()!
     print("""
         Você escuta os rangidos dos degraus, mas finalmente consegue chegar ao topo. Está muito frio, você está tremendo e corre risco de uma hipotermia se continuar do lado de fora. Você não consegue enxergar muito bem, mas parece escutar alguém ali dentro. Pela janela você vê o vulto de alguém que parece ser um funcionário. Talvez seja um guarda. Você pode bater na janela para pedir para ele abrir a porta para você, ou pode descer e ir para a caverna vista anteriormente. O que você faz?
-              - Digite 1 para bater na janela
-              - Digite 2 para tentar ir para a caverna vista anteriormente
+              - Digite 1 para bater na janela 🪟
+              - Digite 2 para tentar ir para a caverna vista anteriormente 🗿
     """)
     let escolha = confere_input()
     if escolha == "1" {
@@ -240,8 +240,8 @@ func caverna_manteve_rota(){
     pula = readLine()!
     print("""
     Com um certo receio, você repensa adentra-la, ou ir ate o farol buscar ajuda, já que não escuta a voz ou a presença de ninguém.
-        - Digite 1 para seguir e entrar na caverna
-        - Digite 2 para voltar e ir até o farol
+        - Digite 1 para seguir e entrar na caverna 🗿
+        - Digite 2 para voltar e ir até o farol 🗼
     """)
     let escolha = confere_input()
     if escolha == "1" {
@@ -267,8 +267,8 @@ func farol_ruim() {
     pula = readLine()!
     print("""
         "Perto dessas revistas, tem um livro, que parece ser um diário, a única coisa mais recente e não completamente coberta por pó. Você decide abrir o diário ou não?
-            - Digite 1 para abrir o diário
-            - Digite 2 para não abrir
+            - Digite 1 para abrir o diário 📔
+            - Digite 2 para não abrir 🚫
         
 """)
     let escolha = confere_input()
