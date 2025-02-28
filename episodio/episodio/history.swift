@@ -1,5 +1,5 @@
 import Foundation
-import SwiftUI
+
 var pula:String = "\n"
 func imprime_cap1(nome:String) {
     print("Capítulo 1. A viagem.")
@@ -297,4 +297,3 @@ func nao_abrir() {
     \tVocê opta, com medo, a não abrir o diário. De repente a floresta fica completamente silenciosa, não é possível escutar absolutamente nada, nem mesmo o barulho do vento que estava tão forte. Você olha pela janela do farol mas tudo está muito escuro lá fora. Então, você se vira de costas para a janela. Algo parece obstruir a lâmpada que iluminava o farol. Uma sombra rapidamente aumenta sobre você, e o mesmo barulho do animal ouvido por vocês na estrada é o ultimo que você escuta antes que suas garras te alcancem.
 """)
 }
-
