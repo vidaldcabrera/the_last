@@ -39,8 +39,9 @@ func desvia_rota(nome:String) {
             Você e Marina instalam as barracas antes do sol se por completamente, enquanto Pedro vai lavar o rosto no rio para relaxar depois desse trajeto tortuoso. Passam-se uns 10 minutos, e nada do Pedro.
     """)
     pula = readLine()!
+   print("VOCÊ: “Cadê o Pedro? Não consigo vê-lo e ele ainda não voltou…”")
+    pula = readLine()
     print("""
-            VOCÊ: “Cadê o Pedro? Não consigo vê-lo e ele ainda não voltou…”
             MARINA: “Não sei, vamos esperar que logo ele volta. Vamos acendendo uma fogueira enquanto isso, está começando a esfriar.”
             Você concorda, mas continua ansioso com a demora do Pedro. Passam-se mais uns 30 minutos e nada dele.
             MARINA: “Estou achando que o Pedro se perdeu, ele é muito atrapalhado, não faz nada direito. Vou procurar ele enquanto ainda não escureceu totalmente. Fica aqui cuidando das coisas, ok?”
