@@ -4,14 +4,15 @@ func imprime_cap1(nome:String) {
     print("Capítulo 1. A viagem.")
     print("""
     \tNuma sexta-feria ao entardecer, você e seus amigos estão indo acampar de carro. Sem perceber, entraram numa estrada perigosa e o sinal GPS começa falhar. Assustados, vocês tentam voltar ao caminho, mas acabam se perdendo. Ainda sem muita certeza de onde estão, seu GPS volta a funcionar e recalcula a rota. Depois de um tempo nesse ‘novo’ caminho, passa subitamente no meio da estrada o que parece ser um animal, correndo em direção ao local que vocês precisam seguir. Você freia o carro bruscamente e escutam galhos se quebrando, parece ser algo ou alguém muito grande, mas vocês não conseguem identificar o que é.
-    """)
-    print("""
-
         PEDRO: ‘Meu Deus! Que bizarro, o que é isso?’
         MARINA: ‘Para de ser medroso, é só um bichinho.’
         PEDRO: 'Bichinho? É quase um leão!'
         MARINA: 'Ah, como eu achei que ia dar certo acampar na natureza com alguém com medo até do barulho do vento? Só segue o caminho aí.'
         PEDRO: 'Não cara, é um barulho meio preocupante mesmo! Como a gente já está perto, podemos ir para o outro lado e acampar por lá mesmo. Né, \(nome)?
+<<<<<<< HEAD
+=======
+        Pedro, assustado, sugere desviar da rota e seguir para um local mais silencioso. Já Marina prefere seguir a rota planejada.\n\tCabe a você, \(nome), desempatar a decisão. O que você prefere?\n\t\t- Digite 1 para desviar da rota\n\t\t- Digite 2 para seguir o caminho planejado
+>>>>>>> cap-3
     """)
 }
 
@@ -29,14 +30,22 @@ func capitulo_3_desvia(nome:String, decisao:String) {
 func capitulo_3_segue(nome:String, decisao:String) {
     // Caverna
     if decisao == "1" {
+<<<<<<< HEAD
         caverna_manteve_rota()
     } // Farol
     else {
         farol_ruim()
+=======
+        
+    } // Farol
+    else {
+        
+>>>>>>> cap-3
     }
 }
 
 func farol_bom() {
+<<<<<<< HEAD
     print("""
         Pedro, assustado, sugere desviar da rota e seguir para um local mais silencioso. Já Marina prefere seguir a rota planejada.\n\tCabe a você, \(nome), desempatar a decisão. O que você prefere?\n\t\t- Digite 1 para desviar da rota\n\t\t- Digite 2 para seguir o caminho planejado
     """)
@@ -185,6 +194,9 @@ func capitulo_3_segue(nome:String, decisao:String) {
 
 func farol_bom() {
     print("""
+=======
+    print("""
+>>>>>>> cap-3
     \tVocê chega ao farol, o caminho não foi muito complicado, mas já estava muito frio e você tinha pouca visibilidade. Tenta entrar pela porta mas está trancada. Decide subir a escada, que tem uma aparência bastante velha. Você passa a mão pelos degraus e percebe que são feitos de madeira, e não tinha nenhum corrimão. Você sobe a escada, já está mais alto que as árvores ao redor. Conforme você sobe, sente cheiro de mofo - alguns degraus estão apodrecendo, um passo errado e você pode despencar dali - a queda definitivamente causaria uma morte, ou minimamente te impediria de se mover até que alguém o encontrasse… se alguém o encontrasse…
         Você escuta os rangidos dos degraus, mas finalmente consegue chegar ao topo. Está muito frio, você está tremendo e corre risco de uma hipotermia se continuar do lado de fora. Você não consegue enxergar muito bem, mas parece escutar alguém ali dentro. Pela janela você vê o vulto de alguém que parece ser um funcionário. Talvez seja um guarda. Você pode bater na janela para pedir para ele abrir a porta para você, ou pode descer e ir para a caverna vista anteriormente. O que você faz?
               - Digite 1 para bater na janela
@@ -206,7 +218,10 @@ func desfecho_bom() {
 """)
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cap-3
 // Caverna com outros finais
 func caverna_rota_desviada() {
     print("""
