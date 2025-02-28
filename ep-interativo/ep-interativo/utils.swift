@@ -43,4 +43,3 @@ func confere_input() -> String {
     } while(input_valido == false)
     return decisao
 }
-
