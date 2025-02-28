@@ -60,7 +60,24 @@ func escolha_rota_desviada(nome:String) {
     
     decisao = confere_input()
     //farol que da certo ou caverna
+    capitulo_3_desvia(nome: nome, decisao: decisao)
 }
+
+// CAMINHOS DA ROTA DESVIADA
+func ficar_parado(nome:String) {
+    print("""
+   Passam-se mais uns 30 minutos e seus amigos não retornaram. Algo definitivamente está errado. Não era tão difícil encontrar o local que estavam acampados, considerando que bastava se guiar pelo fluxo do rio. O frio já tomou conta, e um forte vento gelado apaga a fogueira. A iluminação torna-se bastante escassa. Uma música começa a vir do rádio carro, uma música antiga. Você leva um susto e se aproxima do carro, mas ele estava vazio, aparentemente não tinha ninguém ali ou nos ao redores. De repente o carro desliga novamente, e começa a soltar muita fumaça. Você decide subir em uma árvore e observar a floresta por cima.
+       De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir?\n\t\t- Digite 1 para seguir para a caverna\n\t\t- Digite 2 para seguir para o farol
+   """)
+}
+
+func procurar_amigos(nome:String) {
+   print("""
+        O frio já tomou conta, e um forte vento gelado apaga a fogueira. A iluminação torna-se bastante escassa. Você decide deixar o acampamento e ir procurar seus amigos. Já está tarde e você está preocupado com o estado deles, porém, a floresta é escura e está cheia de mistérios. Você decide subir em uma árvore e observar a floresta por cima.
+        De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir?\n\t\t- Digite 1 para seguir para a caverna\n\t\t- Digite 2 para seguir para o farol
+    """)
+}
+
 
 func mantem_rota(nome:String) {
     print("""
@@ -79,6 +96,7 @@ func mantem_rota(nome:String) {
     """)
 }
 
+
 func escolha_mesma_rota(nome:String, escolha:String) {
     // se manter a mesma rota, decidir parar para acampar ou continuar rodando com o carro
     var escolha = confere_input()
@@ -88,22 +106,11 @@ func escolha_mesma_rota(nome:String, escolha:String) {
         continuar_rodando(nome:nome)
     }
     escolha = confere_input()
+    capitulo_3_segue(nome: nome, decisao: escolha)
+    
 }
 
-func ficar_parado(nome:String) {
-    print("""
-   Passam-se mais uns 30 minutos e seus amigos não retornaram. Algo definitivamente está errado. Não era tão difícil encontrar o local que estavam acampados, considerando que bastava se guiar pelo fluxo do rio. O frio já tomou conta, e um forte vento gelado apaga a fogueira. A iluminação torna-se bastante escassa. Uma música começa a vir do rádio carro, uma música antiga. Você leva um susto e se aproxima do carro, mas ele estava vazio, aparentemente não tinha ninguém ali ou nos ao redores. De repente o carro desliga novamente, e começa a soltar muita fumaça. Você decide subir em uma árvore e observar a floresta por cima.
-       De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir?\n\t\t- Digite 1 para seguir para a caverna\n\t\t- Digite 2 para seguir para o farol
-   """)
-}
-
-func procurar_amigos(nome:String) {
-   print("""
-        O frio já tomou conta, e um forte vento gelado apaga a fogueira. A iluminação torna-se bastante escassa. Você decide deixar o acampamento e ir procurar seus amigos. Já está tarde e você está preocupado com o estado deles, porém, a floresta é escura e está cheia de mistérios. Você decide subir em uma árvore e observar a floresta por cima.
-        De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir?\n\t\t- Digite 1 para seguir para a caverna\n\t\t- Digite 2 para seguir para o farol
-    """)
-}
-
+// CAMINHOS DA MESMA ROTA
 func acampar_no_local(nome:String) {
     print("""
         
@@ -128,5 +135,107 @@ func continuar_rodando(nome:String) {
     VOCÊ:”Calma Pedro, tem muitas especies de animais inofensivos que fazem esse tipo de marcas, é um jeito de marcar território“
     MARINA: “Ah, \(nome)! não foi uma boa ideia vir acampar com ele, só reclama, você esperava o que da floresta? Pipoca e chocolate? Vamos naquele rio perto buscar água enquanto \(nome) termina de montar o acampamento”
     Passou mais de 30 minutos e nenhum sinal dos seus amigos, você, desesperado, pensa em sair buscar eles. De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos. Para onde você deseja seguir? \n\t\t- Digite 1 para seguir para a caverna \n\t\t- Digite 2 para seguir para o farol
+""")
+}
+
+func capitulo_3_desvia(nome:String, decisao:String) {
+    // Caverna. O personagem pode entrar na caverna ruim ou voltar pro farol com desfecho bom
+    if decisao == "1" {
+        caverna_rota_desviada()
+    }
+    // Farol. A história termina com o desfecho bom
+    else {
+        farol_bom()
+    }
+}
+
+func capitulo_3_segue(nome:String, decisao:String) {
+    // Caverna
+    if decisao == "1" {
+        caverna_manteve_rota()
+    } // Farol
+    else {
+        farol_ruim()
+    }
+}
+
+func farol_bom() {
+    print("""
+    \tVocê chega ao farol, o caminho não foi muito complicado, mas já estava muito frio e você tinha pouca visibilidade. Tenta entrar pela porta mas está trancada. Decide subir a escada, que tem uma aparência bastante velha. Você passa a mão pelos degraus e percebe que são feitos de madeira, e não tinha nenhum corrimão. Você sobe a escada, já está mais alto que as árvores ao redor. Conforme você sobe, sente cheiro de mofo - alguns degraus estão apodrecendo, um passo errado e você pode despencar dali - a queda definitivamente causaria uma morte, ou minimamente te impediria de se mover até que alguém o encontrasse… se alguém o encontrasse…
+        Você escuta os rangidos dos degraus, mas finalmente consegue chegar ao topo. Está muito frio, você está tremendo e corre risco de uma hipotermia se continuar do lado de fora. Você não consegue enxergar muito bem, mas parece escutar alguém ali dentro. Pela janela você vê o vulto de alguém que parece ser um funcionário. Talvez seja um guarda. Você pode bater na janela para pedir para ele abrir a porta para você, ou pode descer e ir para a caverna vista anteriormente. O que você faz?
+              - Digite 1 para bater na janela
+              - Digite 2 para tentar ir para a caverna vista anteriormente
+""")
+    let escolha = confere_input()
+    if escolha == "1" {
+        desfecho_bom()
+    } else {
+        caverna_rota_desviada()
+    }
+}
+
+// Desfecho bom da história
+func desfecho_bom() {
+    print("""
+    \tAo bater na janela, um homem que está ali dentro olha para você, um pouco confuso. Você grita por ajuda e, então, ele abre a porta para você. Você explica toda a situação para ele, e ele lhe diz que já viu situações como essas antes, aquela floresta claramente escondia muitos mistérios. Ele acionou a polícia e outros dos guardas, por um rádio um pouco antigo, e organizou uma busca por toda a floresta.
+        Durante a madrugada, uma grande equipe adentrou a floresta a procura de Pedro e Marina. Helicópteros sobrevoavam pelas árvores, ajudando a iluminar a floresta escura. Depois de algumas horas, o guarda voltou para o farol, acompanhado dos seus dois amigos perdidos. Você sente um grande alívio, e os abraça. Eles estão muito desnorteados, sem memórias do que tinha acontecido nessas últimas horas. Por fim, vocês se abrigam no farol até o amanhecer, e retornam em segurança para suas casas, com ajuda dos guardas.
+""")
+}
+
+
+// Caverna com outros finais
+func caverna_rota_desviada() {
+    print("""
+    \tChegando próximo a caverna, você começa a buscar por algum sinal de seus amigos, e vê algumas pegadas no lama no chão. São pegadas de pessoas e outras maiores, que você não consegue identificar do que seria. Está frio e escuro, a floresta parece mais silenciosa que o normal. Não ha sons de animais próximos, e a única fonte de luz vem de dentro da caverna. Enquanto você corre até ela, encontra a blusa de marina no chão. ela nunca a perderia. Você se apressa para poder se abrigar e assim procura-los antes que algo pior aconteça. Na entrada da caverna, a luz se intensifica, sem ficar muito claro de onde ela vem. Com um certo receio, você repensa adentra-la.
+    \tVocê entra na caverna e ainda não encontra ninguém. As paredes apresentam padrões estranhos, definitivamente desenhados por alguém. A caverna é mais profunda do que parecia, e você continua a explora-la. Ha roupas e vestígios de que alguém esteve por la, mas ainda nada de seus amigos. Entre os pertences, você identifica o boné do Pedro. As roupas que encontrou estavam estranhamente jogadas. Ao ver de perto percebe que estavam rasgadas, sujas. Você se abaixa e vê que entre elas, estavam as roupas de seus amigos também. Algo parece obstruir a luz que iluminava a caverna. Uma sombra rapidamente aumenta sobre você, e o mesmo barulho do animal ouvido por vocês na estrada é o ultimo que você escuta antes que suas garras te alcancem.
+""")
+}
+
+// Caverna caso mantenha rota
+func caverna_manteve_rota(){
+    print("""
+        \tChegando próximo a caverna, você começa a buscar por algum sinal de seus amigos, e vê algumas pegadas no lama no chão. São pegadas de pessoas e outras maiores, que você não consegue identificar do que seria. Está frio e escuro, a floresta parece mais silenciosa que o normal. Não ha sons de animais próximos, e a única fonte de luz vem de dentro da caverna. Enquanto você corre até ela, encontra a blusa de marina no chão. ela nunca a perderia. Você se apressa para poder se abrigar e assim procura-los antes que algo pior aconteça. Na entrada da caverna, a luz se intensifica, sem ficar muito claro de onde ela vem. Com um certo receio, você repensa adentra-la, ou ir ate o farol buscar ajuda, já que não escuta a voz ou a presença de ninguém.
+        - Digite 1 para seguir e entrar na caverna
+        - Digite 2 para voltar e ir até o farol
+    """)
+    let escolha = confere_input()
+    if escolha == "1" {
+        caverna_rota_desviada()
+    } else {
+        farol_ruim()
+    }
+}
+
+// Farol com final ruim
+func farol_ruim() {
+    print("""
+    \tVocê chega ao farol, o caminho não foi muito complicado, mas já estava muito frio e você tinha pouca visibilidade. Tenta entrar pela porta mas está trancada. Decide subir a escada, que tem uma aparência bastante velha. Você passa a mão pelos degraus e percebe que são feitos de madeira, e não tinha nenhum corrimão. Você sobe a escada, já está mais alto que as árvores ao redor. Conforme você sobe, sente cheiro de mofo - alguns degraus estão apodrecendo, um passo errado e você pode despencar dali - a queda definitivamente causaria uma morte, ou minimamente te impediria de se mover até que alguém o encontrasse… se alguém o encontrasse…
+        Você escuta os rangidos dos degraus, mas finalmente consegue chegar ao topo. Está muito frio, você está tremendo e corre risco de uma hipotermia se continuar do lado de fora. A única forma de adentrar o farol é quebrando a janela com uma barra de metal que está ali no chão.
+        Você quebra a janela e consegue entrar. O lugar parece abandonado: você vê muita bagunça, alguns cacos de vidro quebrado no chão, as paredes estão arranhadas, como se um animal muito grande tivesse passado por ali, de alguma forma. É tudo muito antigo e aparentemente de pouca relevância. Há algumas revistas de muitos anos atrás, livros, objetos pessoais que indicavam que alguém morou ali por um tempo, mas há décadas atrás. Perto dessas revistas, tem um livro, que parece ser um diário, a única coisa mais recente e não completamente coberta por pó. Você decide abrir o diário ou não?
+            - Digite 1 para abrir o diário
+            - Digite 2 para não abrir
+        
+""")
+    let escolha = confere_input()
+    if escolha == "1" {
+        abrir_diario()
+    } else {
+        nao_abrir()
+    }
+    
+}
+
+// Caso abra o diário
+func abrir_diario() {
+    print("""
+    \tVoce abre o diário, que, apesar de um pouco antigo, parece bem mais atual que o restante dos pertences no farol. Nele, há várias paginas de uma pessoa descrevendo seus dias sobrevivendo nessa parte da floresta sozinha após se perder, muito parecido com a sua situação. Inicialmente parece muito útil, mas as anotações passam a ficar meio estranhas e perdendo o sentido. Entre essas paginas desconexas, um texto em específico chama sua atenção:
+        “Não há mais escapatória. Eu lutei contra a verdade todo esse tempo, mas não ha mais nada a ser feito. Espero que isso não seja encontrado por ninguém, mas se você esta lendo isso, sinto muito. Há mistérios demais nessa floresta, e o fenômeno que me prendeu aqui nunca ficou claro, mas não me resta nada a ser feito. todos os lugares dessa floresta parecem muito similares, não? Mesmas arvores. Mesmos animais. O rio que nunca tem fim. A caverna que, não importa a onde esteja, sempre chega até ela. Se conseguiu escapar da criatura que habita aquele lugar e chegar até aqui, parabéns. Mas talvez aquele fosse um destino menos cruel. Passar o resto de sua existência preso nesse loop enquanto a floresta te consome é o pior que poderia ter me acontecido.”
+""")
+}
+
+// Caso não abra o diário
+func nao_abrir() {
+    print("""
+    \tVocê opta, com medo, a não abrir o diário. De repente a floresta fica completamente silenciosa, não é possível escutar absolutamente nada, nem mesmo o barulho do vento que estava tão forte. Você olha pela janela do farol mas tudo está muito escuro lá fora. Então, você se vira de costas para a janela. Algo parece obstruir a lâmpada que iluminava o farol. Uma sombra rapidamente aumenta sobre você, e o mesmo barulho do animal ouvido por vocês na estrada é o ultimo que você escuta antes que suas garras te alcancem.
 """)
 }

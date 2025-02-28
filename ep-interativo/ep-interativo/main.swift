@@ -16,3 +16,4 @@ capitulo_2(nome: nome_personagem, escolha: decisao)
 
 
 
+
