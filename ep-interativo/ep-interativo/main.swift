@@ -12,6 +12,8 @@ imprime_cap1(nome: nome_personagem)
 
 // Obtem decisao
 var decisao = confere_input()
+capitulo_2(nome: nome_personagem, escolha: decisao)
+
 
 
 

@@ -7,6 +7,9 @@
 
 import Foundation
 func cria_personagem() -> String {
+    /*
+     Obtem o nome do personagem
+     */
     print("Entre com o nome do personagem.")
 
     var nome_personagem : String = readLine()!.uppercased()
@@ -19,6 +22,11 @@ func cria_personagem() -> String {
 }
 
 func confere_input() -> String {
+    /*
+     Recebe o input com a decisao tomada
+     Analisa se o input é ou o valor 1 ou 2
+     Se não for um input válido, ele pede para o usuário digitar novamente
+     */
     var input_valido: Bool
     var decisao:String!
     decisao = readLine()
