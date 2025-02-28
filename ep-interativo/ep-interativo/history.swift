@@ -13,6 +13,30 @@ func imprime_cap1(nome:String) {
         MARINA: 'Ah, como eu achei que ia dar certo acampar na natureza com alguém com medo até do barulho do vento? Só segue o caminho aí.'
         PEDRO: 'Não cara, é um barulho meio preocupante mesmo! Como a gente já está perto, podemos ir para o outro lado e acampar por lá mesmo. Né, \(nome_personagem)?
     """)
+}
+
+func capitulo_3_desvia(nome:String, decisao:String) {
+    // Caverna. O personagem pode entrar na caverna ruim ou voltar pro farol com desfecho bom
+    if decisao == "1" {
+        caverna_rota_desviada()
+    }
+    // Farol. A história termina com o desfecho bom
+    else {
+        farol_bom()
+    }
+}
+
+func capitulo_3_segue(nome:String, decisao:String) {
+    // Caverna
+    if decisao == "1" {
+        caverna_manteve_rota()
+    } // Farol
+    else {
+        farol_ruim()
+    }
+}
+
+func farol_bom() {
     print("""
         Pedro, assustado, sugere desviar da rota e seguir para um local mais silencioso. Já Marina prefere seguir a rota planejada.\n\tCabe a você, \(nome_personagem), desempatar a decisão. O que você prefere?\n\t- Digite 1 para desviar da rota\n\t- Digite 2 para seguir o caminho planejado
     """)

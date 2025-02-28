@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4446A12D70986A00C90E66 /* history.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4446A02D70986A00C90E66 /* history.swift */; };
 		EDCB0CAE2D70879900A0F0D9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB0CAD2D70879900A0F0D9 /* main.swift */; };
 		EDCB0CB52D70895C00A0F0D9 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB0CB42D70895C00A0F0D9 /* utils.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C4446A02D70986A00C90E66 /* history.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = history.swift; sourceTree = "<group>"; };
 		EDCB0CAA2D70879900A0F0D9 /* ep-interativo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ep-interativo"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCB0CAD2D70879900A0F0D9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		EDCB0CB42D70895C00A0F0D9 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		EDCB0CAC2D70879900A0F0D9 /* ep-interativo */ = {
 			isa = PBXGroup;
 			children = (
+				2C4446A02D70986A00C90E66 /* history.swift */,
 				EDCB0CB42D70895C00A0F0D9 /* utils.swift */,
 				EDCB0CAD2D70879900A0F0D9 /* main.swift */,
 			);
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDCB0CAE2D70879900A0F0D9 /* main.swift in Sources */,
+				2C4446A12D70986A00C90E66 /* history.swift in Sources */,
 				EDCB0CB52D70895C00A0F0D9 /* utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
