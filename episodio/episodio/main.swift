@@ -6,6 +6,10 @@
 //
 
 import Foundation
+import Prism
+
+imprime_historia()
+da_enter()
 
 let nome_personagem = cria_personagem()
 imprime_cap1(nome: nome_personagem)
