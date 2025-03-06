@@ -44,7 +44,6 @@ func confere_input() -> String {
     return decisao
 }
 
-
 func delay_dialogo(dialogo:Array<String>) {
     for fala in dialogo {
         print(fala)
@@ -58,9 +57,83 @@ func da_enter() {
 }
 
 func fim_jogo() {
-    let mensagem = ["F", "I", "M", " D", "E", " J", "O", "G", "O"]
-    for char in mensagem {
-        print(char, terminator: "")
-        usleep(200000)
+    //let mensagem = ["F", "I", "M", " D", "E", " J", "O", "G", "O"]
+    let fim_ascii = """
+
+
+░▒▓████████▓▒░▒▓█▓▒░▒▓██████████████▓▒░       ░▒▓███████▓▒░░▒▓████████▓▒░             ░▒▓█▓▒░░▒▓██████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░
+░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░                    ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░
+░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░                    ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░
+░▒▓██████▓▒░ ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓██████▓▒░               ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒▒▓███▓▒░▒▓█▓▒░░▒▓█▓▒░
+░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░
+░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░
+░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░      ░▒▓███████▓▒░░▒▓████████▓▒░       ░▒▓██████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░
+                                                                                                                                     
+                                                                                                                                    
+
+"""
+    print(fim_ascii)
+    //for char in mensagem {
+    //print(char, terminator: "")
+    //usleep(200000)
+//}
+}
+
+func anda_carro() {
+    let carros = ["""
+ _______
+   /______/"=,
+  [     | "=, "=,,
+  [-----+----"=,* )
+  (_---_____---_)/
+    (O)     (O)
+""",
+"""
+\t\t\t\t\t\t_______
+\t\t\t\t\t\t\t/______/"=,
+\t\t\t\t\t\t\t[     | "=, "=,,
+\t\t\t\t\t\t\t[-----+----"=,* )
+\t\t\t\t\t\t\t(_---_____---_)/
+\t\t\t\t\t\t\t  (O)     (O)
+""",
+"""
+\t\t\t\t\t\t\t\t\t\t\t\t\t_______
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t/______/"=,
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t[     | "=, "=,,
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t[-----+----"=,* )
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t(_---_____---_)/
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t  (O)     (O)
+""",
+"""
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t_______
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t/______/"=,
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[     | "=, "=,,
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[-----+----"=,* )
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(_---_____---_)/
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  (O)     (O)
+""",
+"""
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t_______
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t/______/"=,
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[     | "=, "=,,
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[-----+----"=,* )
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(_---_____---_)/
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  (O)     (O)
+""",
+"""
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t_______
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t/______/"=,
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[     | "=, "=,,
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[-----+----"=,* )
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(_---_____---_)/
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  (O)     (O)
+"""
+]
+    
+    for carro in carros {
+        print(carro)
+        usleep(500000)
     }
 }
+
+
