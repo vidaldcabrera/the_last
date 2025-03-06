@@ -43,3 +43,24 @@ func confere_input() -> String {
     } while(input_valido == false)
     return decisao
 }
+
+
+func delay_dialogo(dialogo:Array<String>) {
+    for fala in dialogo {
+        print(fala)
+        sleep(2)
+    }
+}
+
+func da_enter() {
+    print(separador)
+    pula = readLine()!
+}
+
+func fim_jogo() {
+    let mensagem = ["F", "I", "M", " D", "E", " J", "O", "G", "O"]
+    for char in mensagem {
+        print(char, terminator: "")
+        usleep(200000)
+    }
+}
