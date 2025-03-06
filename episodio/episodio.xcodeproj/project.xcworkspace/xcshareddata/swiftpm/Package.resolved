@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Prism",
+        "repositoryURL": "https://github.com/jordanbaird/Prism",
+        "state": {
+          "branch": null,
+          "revision": "9bb480683de5d527a87a994c8a55ac188158bb14",
+          "version": "0.0.9"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

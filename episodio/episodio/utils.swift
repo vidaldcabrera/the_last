@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Prism
 func cria_personagem() -> String {
     /*
      Obtem o nome do personagem

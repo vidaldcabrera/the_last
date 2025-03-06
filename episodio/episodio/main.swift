@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Prism
 
 let nome_personagem = cria_personagem()
 imprime_cap1(nome: nome_personagem)

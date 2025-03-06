@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3F18CD2D71F76800A40E15 /* Prism in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3F18CC2D71F76800A40E15 /* Prism */; };
 		EDD3A76A2D71E8E70023D922 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3A7692D71E8E70023D922 /* utils.swift */; };
 		EDD3A76D2D71E8FC0023D922 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3A76B2D71E8FC0023D922 /* main.swift */; };
 		EDD3A7702D71E93E0023D922 /* history.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD3A76F2D71E93E0023D922 /* history.swift */; };
@@ -26,8 +27,8 @@
 
 /* Begin PBXFileReference section */
 		EDD3A75D2D71E8C90023D922 /* episodio */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = episodio; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDD3A7692D71E8E70023D922 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = utils.swift; path = "../../../../Desktop/ep-interativo/utils.swift"; sourceTree = "<group>"; };
-		EDD3A76B2D71E8FC0023D922 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = "../../../../Desktop/ep-interativo/main.swift"; sourceTree = "<group>"; };
+		EDD3A7692D71E8E70023D922 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		EDD3A76B2D71E8FC0023D922 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		EDD3A76F2D71E93E0023D922 /* history.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = history.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -36,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3F18CD2D71F76800A40E15 /* Prism in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +86,9 @@
 			dependencies = (
 			);
 			name = episodio;
+			packageProductDependencies = (
+				2C3F18CC2D71F76800A40E15 /* Prism */,
+			);
 			productName = episodio;
 			productReference = EDD3A75D2D71E8C90023D922 /* episodio */;
 			productType = "com.apple.product-type.tool";
@@ -112,6 +117,9 @@
 				Base,
 			);
 			mainGroup = EDD3A7542D71E8C90023D922;
+			packageReferences = (
+				2C3F18CB2D71F76800A40E15 /* XCRemoteSwiftPackageReference "Prism" */,
+			);
 			productRefGroup = EDD3A75E2D71E8C90023D922 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -290,6 +298,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C3F18CB2D71F76800A40E15 /* XCRemoteSwiftPackageReference "Prism" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jordanbaird/Prism";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C3F18CC2D71F76800A40E15 /* Prism */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C3F18CB2D71F76800A40E15 /* XCRemoteSwiftPackageReference "Prism" */;
+			productName = Prism;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDD3A7552D71E8C90023D922 /* Project object */;
 }
