@@ -29,7 +29,7 @@ let narrador = Prism {
 }
 
 func imprime_cap1(nome:String) {
-    print(ForegroundColor(.yellow, "\nCapítulo 1. A viagem.\n"))
+    imprime_titulo_cap1()
     print("""
     \(narrador)Numa sexta-feria ao entardecer, você e seus amigos estão indo acampar de carro. Sem perceber, entraram numa estrada perigosa e o sinal GPS começa falhar. Assustados, vocês tentam voltar ao caminho, mas acabam se perdendo. Ainda sem muita certeza de onde estão, seu GPS volta a funcionar e recalcula a rota.
     """)
@@ -53,36 +53,35 @@ func imprime_cap1(nome:String) {
         \(ForegroundColor(.red, "- Digite 1 para desviar da rota 🛣"))
         \(ForegroundColor(.red, "- Digite 2 para seguir o caminho planejado 🗺"))
     """)
-
     let estrada =
-#"""
-                                                                   _
-                                     ___                          (_)
-                                   _/XXX\
-                    _             /XXXXXX\_                                    __
-                    X\__    __   /X XXXX XX\                          _       /XX\__      ___
-                        \__/  \_/__       \ \                       _/X\__   /XX XXX\____/XXX\
-                      \  ___   \/  \_      \ \               __   _/      \_/  _/  -   __  -  \__/
-                     ___/   \__/   \ \__     \\__           /  \_//  _ _ \  \     __  /  \____//
-                    /  __    \  /     \ \_   _//_\___     _/    //           \___/  \/     __/
-                    __/_______\________\__\_/________\_ _/_____/_____________/_______\____/_______ 
-                                                      /|\
-                                                     / | \
-                                                    /  |  \
-                                                   /   |   \
-                                                  /    |    \
-                                                 /     |     \
-                                                /      |      \
-                                               /       |       \
-                                              /        |        \
-                                             /         |         \
-"""#
-    print(ForegroundColor(.green, estrada))
+    #"""
+                                                                       _
+                                         ___                          (_)
+                                       _/XXX\
+                        _             /XXXXXX\_                                    __
+                        X\__    __   /X XXXX XX\                          _       /XX\__      ___
+                            \__/  \_/__       \ \                       _/X\__   /XX XXX\____/XXX\
+                          \  ___   \/  \_      \ \               __   _/      \_/  _/  -   __  -  \__/
+                         ___/   \__/   \ \__     \\__           /  \_//  _ _ \  \     __  /  \____//
+                        /  __    \  /     \ \_   _//_\___     _/    //           \___/  \/     __/
+                        __/_______\________\__\_/________\_ _/_____/_____________/_______\____/_______
+                                                          /|\
+                                                         / | \
+                                                        /  |  \
+                                                       /   |   \
+                                                      /    |    \
+                                                     /     |     \
+                                                    /      |      \
+                                                   /       |       \
+                                                  /        |        \
+                                                 /         |         \
+    """#
+        print(ForegroundColor(.green, estrada))
+        da_enter()
 }
 
 func capitulo_2(nome:String, escolha:String) {
-    
-    print(ForegroundColor(.yellow, "\nCapítulo 2. A floresta.\n"))
+    imprime_titulo_cap2()
     if escolha == "1" {
         // opcao escolhida: desviar a rota
         desvia_rota(nome: nome)
@@ -99,31 +98,30 @@ func desvia_rota(nome:String) {
     \(narrador)Vocês seguem para o caminho oposto ao barulho. Por fim, você e seus amigos chegam em um local silencioso. Está um belo por do sol adiante, vocês estão rodeados por árvores e um extenso rio está próximo, mas não conseguem ver muito mais que isso. Parecem estar completamente sozinhos.
     Você e Marina instalam as barracas antes do sol se por completamente, enquanto Pedro vai lavar o rosto no rio para relaxar depois desse trajeto tortuoso. Passam-se uns 10 minutos, e nada do Pedro.
     """)
-
     let por_do_sol =
-    #"""
-                            .       .        .
-                             .      .       .        .'               .--.
-                     '.       .     .      .       .'       ________.'_.'_____.--.___
-                       '.      .    .     .      .'        ()_() ooo   ~/   -.|      "-._
-                         '.     .   .    .     .'          ((((<____   |      |  ____  = )
-                           '.    .  .   .    .'       .-'  (__)/ () \___\_____|_/ () \__/)
-                    .        '   ______    .'      .-'    ___'.'.__.'_________'.'.__.'____
-                     '-.      .-~      ~-.      .-'      /
-                        '-. .'            '. .-'      __/
-                    _      .                .      _./
-                     '-._ .                  . _.-'  |
-                          :                  :      /
-                      .-' .                  . '- .'
-                    -'     .                . . .'
-                        .'  '.            .' _.'
-                      .'  .'  '__________'.-'
-                    ~~~~~~~~~~~~~~~~~~~~~/
-                    ~~  ~~~    ~~~ ~~ ~ /jro
-                      ~~   ~~~~  ~~~~ ~/
+        #"""
+                                .       .        .
+                                 .      .       .        .'               .--.
+                         '.       .     .      .       .'       ________.'_.'_____.--.___
+                           '.      .    .     .      .'        ()_() ooo   ~/   -.|      "-._
+                             '.     .   .    .     .'          ((((<____   |      |  ____  = )
+                               '.    .  .   .    .'       .-'  (__)/ () \___\_____|_/ () \__/)
+                        .        '   ______    .'      .-'    ___'.'.__.'_________'.'.__.'____
+                         '-.      .-~      ~-.      .-'      /
+                            '-. .'            '. .-'      __/
+                        _      .                .      _./
+                         '-._ .                  . _.-'  |
+                              :                  :      /
+                          .-' .                  . '- .'
+                        -'     .                . . .'
+                            .'  '.            .' _.'
+                          .'  .'  '__________'.-'
+                        ~~~~~~~~~~~~~~~~~~~~~/
+                        ~~  ~~~    ~~~ ~~ ~ /jro
+                          ~~   ~~~~  ~~~~ ~/
 
-"""#
-    print(ForegroundColor(.green, por_do_sol))
+    """#
+        print(ForegroundColor(.green, por_do_sol))
     
     da_enter()
     
@@ -135,22 +133,21 @@ func desvia_rota(nome:String) {
     "\(nome): “Beleza”"]
     
     delay_dialogo(dialogo: dialogo)
-
+    
     let fogueira =
-    
-    #"""
-                                    ______
-                            jgs    /     /\
-                                  /     /  \
-                                 /_____/----\_    (
-                                "     "          ).
-                               _ ___          o (:') o
-                              (@))_))        o ~/~~\~ o
-                                              o  o  o
-"""#
-    
+        
+        #"""
+                                        ______
+                                jgs    /     /\
+                                      /     /  \
+                                     /_____/----\_    (
+                                    "     "          ).
+                                   _ ___          o (:') o
+                                  (@))_))        o ~/~~\~ o
+                                                  o  o  o
+    """#
+        
     print(ForegroundColor(.green, fogueira))
-    
     da_enter()
     
     print("""
@@ -192,9 +189,7 @@ func ficar_parado(nome:String) {
     \(narrador)De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos.
    """)
     da_enter()
-
     caverna_ou_farol()
-
     print("""
     \(narrador)Para onde você deseja seguir?
     \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
@@ -211,9 +206,7 @@ func procurar_amigos(nome:String) {
     \(narrador)De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos.
     """)
     da_enter()
-
     caverna_ou_farol()
-    
     print("""
     \(narrador)Para onde você deseja seguir?
     \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
@@ -281,9 +274,7 @@ func acampar_no_local(nome:String) {
     \(narrador)Você termina de montar o acampamento, porém, nenhum dos seus amigos voltou ainda e fica preocupado. Na distância, você consegue enxergar duas fontes de luz, uma proveniente de um farol e outra proveniente de uma caverna. A caverna, bastante luminosa, pelo que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos.
     """)
     da_enter()
-
     caverna_ou_farol()
-    
     print("""
     \(narrador)Para onde você deseja seguir?
     \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
@@ -319,9 +310,7 @@ func continuar_rodando(nome:String) {
     \(narrador)Passou mais de 30 minutos e nenhum sinal dos seus amigos, você, desesperado, pensa em sair buscar eles. De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos.
     """)
     da_enter()
-
     caverna_ou_farol()
-    
     print("""
     \(narrador)Para onde você deseja seguir?
         \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
@@ -330,7 +319,7 @@ func continuar_rodando(nome:String) {
 }
 
 func capitulo_3_desvia(nome:String, decisao:String) {
-    print(ForegroundColor(.yellow, "\nCapítulo 3. O desfecho.\n"))
+    imprime_titulo_cap3()
     // Caverna. O personagem pode entrar na caverna ruim ou voltar pro farol com desfecho bom
     if decisao == "1" {
         caverna_rota_desviada()
@@ -405,6 +394,7 @@ func caverna_manteve_rota(){
     \(narrador)Chegando próximo a caverna, você começa a buscar por algum sinal de seus amigos, e vê algumas pegadas no lama no chão. São pegadas de pessoas e outras maiores, que você não consegue identificar do que seria. Está frio e escuro, a floresta parece mais silenciosa que o normal. Não ha sons de animais próximos, e a única fonte de luz vem de dentro da caverna. Enquanto você corre até ela, encontra a blusa de marina no chão. ela nunca a perderia. Você se apressa para poder se abrigar e assim procura-los antes que algo pior aconteça. Na entrada da caverna, a luz se intensifica, sem ficar muito claro de onde ela vem.
     """)
     da_enter()
+    caverna_ou_farol()
     print("""
     \(narrador)Com um certo receio, você repensa adentra-la, ou ir ate o farol buscar ajuda, já que não escuta a voz ou a presença de ninguém.
         \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
