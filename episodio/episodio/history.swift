@@ -8,6 +8,7 @@ func imprime_cap1(nome:String) {
     Numa sexta-feria ao entardecer, você e seus amigos estão indo acampar de carro. Sem perceber, entraram numa estrada perigosa e o sinal GPS começa falhar. Assustados, vocês tentam voltar ao caminho, mas acabam se perdendo. Ainda sem muita certeza de onde estão, seu GPS volta a funcionar e recalcula a rota.
     """)
     da_enter()
+    
     print("""
     Depois de um tempo nesse ‘novo’ caminho, passa subitamente no meio da estrada o que parece ser um animal, correndo em direção ao local que vocês precisam seguir. Você freia o carro bruscamente e escutam galhos se quebrando, parece ser algo ou alguém muito grande, mas vocês não conseguem identificar o que é.
     """)
@@ -256,6 +257,7 @@ func desfecho_bom() {
     print("""
         Durante a madrugada, uma grande equipe adentrou a floresta a procura de Pedro e Marina. Helicópteros sobrevoavam pelas árvores, ajudando a iluminar a floresta escura. Depois de algumas horas, o guarda voltou para o farol, acompanhado dos seus dois amigos perdidos. Você sente um grande alívio, e os abraça. Eles estão muito desnorteados, sem memórias do que tinha acontecido nessas últimas horas. Por fim, vocês se abrigam no farol até o amanhecer, e retornam em segurança para suas casas, com ajuda dos guardas.
     """)
+    fim_jogo()
 }
 
 
@@ -268,6 +270,7 @@ func caverna_rota_desviada() {
     print("""
     \tVocê entra na caverna e ainda não encontra ninguém. As paredes apresentam padrões estranhos, definitivamente desenhados por alguém. A caverna é mais profunda do que parecia, e você continua a explora-la. Ha roupas e vestígios de que alguém esteve por la, mas ainda nada de seus amigos. Entre os pertences, você identifica o boné do Pedro. As roupas que encontrou estavam estranhamente jogadas. Ao ver de perto percebe que estavam rasgadas, sujas. Você se abaixa e vê que entre elas, estavam as roupas de seus amigos também. Algo parece obstruir a luz que iluminava a caverna. Uma sombra rapidamente aumenta sobre você, e o mesmo barulho do animal ouvido por vocês na estrada é o ultimo que você escuta antes que suas garras te alcancem.
     """)
+    fim_jogo()
 }
 
 // Caverna caso mantenha rota
@@ -327,6 +330,7 @@ func abrir_diario() {
     print("""
         “Não há mais escapatória. Eu lutei contra a verdade todo esse tempo, mas não ha mais nada a ser feito. Espero que isso não seja encontrado por ninguém, mas se você esta lendo isso, sinto muito. Há mistérios demais nessa floresta, e o fenômeno que me prendeu aqui nunca ficou claro, mas não me resta nada a ser feito. todos os lugares dessa floresta parecem muito similares, não? Mesmas arvores. Mesmos animais. O rio que nunca tem fim. A caverna que, não importa a onde esteja, sempre chega até ela. Se conseguiu escapar da criatura que habita aquele lugar e chegar até aqui, parabéns. Mas talvez aquele fosse um destino menos cruel. Passar o resto de sua existência preso nesse loop enquanto a floresta te consome é o pior que poderia ter me acontecido.”
 """)
+    fim_jogo()
 }
 
 // Caso não abra o diário
@@ -334,4 +338,5 @@ func nao_abrir() {
     print("""
     \tVocê opta, com medo, a não abrir o diário. De repente a floresta fica completamente silenciosa, não é possível escutar absolutamente nada, nem mesmo o barulho do vento que estava tão forte. Você olha pela janela do farol mas tudo está muito escuro lá fora. Então, você se vira de costas para a janela. Algo parece obstruir a lâmpada que iluminava o farol. Uma sombra rapidamente aumenta sobre você, e o mesmo barulho do animal ouvido por vocês na estrada é o ultimo que você escuta antes que suas garras te alcancem.
 """)
+    fim_jogo()
 }
