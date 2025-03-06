@@ -77,7 +77,6 @@ func imprime_cap1(nome:String) {
                                                  /         |         \
     """#
         print(ForegroundColor(.green, estrada))
-        da_enter()
 }
 
 func capitulo_2(nome:String, escolha:String) {
@@ -121,8 +120,7 @@ func desvia_rota(nome:String) {
                           ~~   ~~~~  ~~~~ ~/
 
     """#
-        print(ForegroundColor(.green, por_do_sol))
-    
+    print(ForegroundColor(.green, por_do_sol))
     da_enter()
     
     let dialogo = [
@@ -195,7 +193,6 @@ func ficar_parado(nome:String) {
     \(ForegroundColor(.red, "- Digite 2 para seguir para o farol 🗼"))
    """)
     caverna_ou_farol()
-
 }
 
 func procurar_amigos(nome:String) {
@@ -213,7 +210,6 @@ func procurar_amigos(nome:String) {
     \(ForegroundColor(.red, "- Digite 2 para seguir para o farol 🗼"))
     """)
     caverna_ou_farol()
-
 }
 
 
@@ -295,8 +291,7 @@ func acampar_no_local(nome:String) {
     \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
     \(ForegroundColor(.red, "- Digite 2 para seguir para o farol 🗼"))
     """)
-     caverna_ou_farol()
-
+    caverna_ou_farol()
 }
 
 func continuar_rodando(nome:String) {
@@ -321,7 +316,6 @@ func continuar_rodando(nome:String) {
     "\(marina): “Ah, \(nome)! não foi uma boa ideia vir acampar com ele, só reclama, você esperava o que da floresta? Pipoca e chocolate? Vamos naquele rio perto buscar água enquanto \(nome) termina de montar o acampamento”"]
     
     delay_dialogo(dialogo: dialogo)
-
     let fogueira =
         
         #"""
@@ -336,7 +330,6 @@ func continuar_rodando(nome:String) {
     """#
         
     print(ForegroundColor(.green, fogueira))
-
     da_enter()
     print("""
     \(narrador)Passou mais de 30 minutos e nenhum sinal dos seus amigos, você, desesperado, pensa em sair buscar eles. De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos.
@@ -348,7 +341,6 @@ func continuar_rodando(nome:String) {
         \(ForegroundColor(.red, "- Digite 2 para seguir para o farol 🗼"))
     """)
     caverna_ou_farol()
-
 }
 
 func capitulo_3_desvia(nome:String, decisao:String) {
@@ -433,7 +425,6 @@ func caverna_manteve_rota(){
         \(ForegroundColor(.red, "- Digite 2 para seguir para o farol 🗼"))
     """)
     caverna_ou_farol()
-
     let escolha = confere_input()
     if escolha == "1" {
         caverna_rota_desviada()
@@ -455,12 +446,50 @@ func farol_ruim() {
     print("""
     \(narrador)Você quebra a janela e consegue entrar. O lugar parece abandonado: você vê muita bagunça, alguns cacos de vidro quebrado no chão, as paredes estão arranhadas, como se um animal muito grande tivesse passado por ali, de alguma forma. É tudo muito antigo e aparentemente de pouca relevância. Há algumas revistas de muitos anos atrás, livros, objetos pessoais que indicavam que alguém morou ali por um tempo, mas há décadas atrás.
     """)
+    let livros = #"""
+     _________________________________________________________
+    ||-------------------------------------------------------||
+    ||.--.    .-._                        .----.             ||
+    |||==|____| |H|___            .---.___|""""|_____.--.___ ||
+    |||  |====| | |xxx|_          |+++|=-=|_  _|-=+=-|==|---|||
+    |||==|    | | |   | \         |   |   |_\/_|Black|  | ^ |||
+    |||  |    | | |   |\ \   .--. |   |=-=|_/\_|-=+=-|  | ^ |||
+    |||  |    | | |   |_\ \_( oo )|   |   |    |Magus|  | ^ |||
+    |||==|====| |H|xxx|  \ \ |''| |+++|=-=|""""|-=+=-|==|---|||
+    ||`--^----'-^-^---'   `-' ""  '---^---^----^-----^--^---^||
+    ||-------------------------------------------------------||
+    ||-------------------------------------------------------||
+    ||               ___                   .-.__.-----. .---.||
+    ||              |===| .---.   __   .---| |XX|<(*)>|_|^^^|||
+    ||         ,  /(|   |_|III|__|''|__|:x:|=|  |     |=| Q |||
+    ||      _a'{ / (|===|+|   |++|  |==|   | |  |Illum| | R |||
+    ||      '/\\/ _(|===|-|   |  |''|  |:x:|=|  |inati| | Y |||
+    ||_____  -\{___(|   |-|   |  |  |  |   | |  |     | | Z |||
+    ||       _(____)|===|+|[I]|DK|''|==|:x:|=|XX|<(*)>|=|^^^|||
+    ||              `---^-^---^--^--'--^---^-^--^-----^-^---^||
+    ||-------------------------------------------------------||
+    ||_______________________________________________________||
+"""#
+    print(ForegroundColor(.green, livros))
     da_enter()
     print("""
     \(narrador)Perto dessas revistas, tem um livro, que parece ser um diário, a única coisa mais recente e não completamente coberta por pó. Você decide abrir o diário ou não?
         \(ForegroundColor(.red, "- Digite 1 para abrir o diário 📔"))
         \(ForegroundColor(.red, "- Digite 2 para não abrir 🚫"))
 """)
+    let livro = #"""
+   ,   ,
+  /////|
+ ///// |
+|~~~|  |
+|===|  |
+|j  |  |
+| g |  |
+|  s| /
+|===|/
+'---'
+"""#
+    print(ForegroundColor(.green, livro))
     let escolha = confere_input()
     if escolha == "1" {
         abrir_diario()
