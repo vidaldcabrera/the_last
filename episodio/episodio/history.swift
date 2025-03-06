@@ -53,6 +53,31 @@ func imprime_cap1(nome:String) {
         \(ForegroundColor(.red, "- Digite 1 para desviar da rota 🛣"))
         \(ForegroundColor(.red, "- Digite 2 para seguir o caminho planejado 🗺"))
     """)
+
+    let estrada =
+#"""
+                                                                   _
+                                     ___                          (_)
+                                   _/XXX\
+                    _             /XXXXXX\_                                    __
+                    X\__    __   /X XXXX XX\                          _       /XX\__      ___
+                        \__/  \_/__       \ \                       _/X\__   /XX XXX\____/XXX\
+                      \  ___   \/  \_      \ \               __   _/      \_/  _/  -   __  -  \__/
+                     ___/   \__/   \ \__     \\__           /  \_//  _ _ \  \     __  /  \____//
+                    /  __    \  /     \ \_   _//_\___     _/    //           \___/  \/     __/
+                    __/_______\________\__\_/________\_ _/_____/_____________/_______\____/_______ 
+                                                      /|\
+                                                     / | \
+                                                    /  |  \
+                                                   /   |   \
+                                                  /    |    \
+                                                 /     |     \
+                                                /      |      \
+                                               /       |       \
+                                              /        |        \
+                                             /         |         \
+"""#
+    print(ForegroundColor(.green, estrada))
 }
 
 func capitulo_2(nome:String, escolha:String) {
@@ -74,6 +99,32 @@ func desvia_rota(nome:String) {
     \(narrador)Vocês seguem para o caminho oposto ao barulho. Por fim, você e seus amigos chegam em um local silencioso. Está um belo por do sol adiante, vocês estão rodeados por árvores e um extenso rio está próximo, mas não conseguem ver muito mais que isso. Parecem estar completamente sozinhos.
     Você e Marina instalam as barracas antes do sol se por completamente, enquanto Pedro vai lavar o rosto no rio para relaxar depois desse trajeto tortuoso. Passam-se uns 10 minutos, e nada do Pedro.
     """)
+
+    let por_do_sol =
+    #"""
+                            .       .        .
+                             .      .       .        .'               .--.
+                     '.       .     .      .       .'       ________.'_.'_____.--.___
+                       '.      .    .     .      .'        ()_() ooo   ~/   -.|      "-._
+                         '.     .   .    .     .'          ((((<____   |      |  ____  = )
+                           '.    .  .   .    .'       .-'  (__)/ () \___\_____|_/ () \__/)
+                    .        '   ______    .'      .-'    ___'.'.__.'_________'.'.__.'____
+                     '-.      .-~      ~-.      .-'      /
+                        '-. .'            '. .-'      __/
+                    _      .                .      _./
+                     '-._ .                  . _.-'  |
+                          :                  :      /
+                      .-' .                  . '- .'
+                    -'     .                . . .'
+                        .'  '.            .' _.'
+                      .'  .'  '__________'.-'
+                    ~~~~~~~~~~~~~~~~~~~~~/
+                    ~~  ~~~    ~~~ ~~ ~ /jro
+                      ~~   ~~~~  ~~~~ ~/
+
+"""#
+    print(ForegroundColor(.green, por_do_sol))
+    
     da_enter()
     
     let dialogo = [
@@ -84,8 +135,24 @@ func desvia_rota(nome:String) {
     "\(nome): “Beleza”"]
     
     delay_dialogo(dialogo: dialogo)
+
+    let fogueira =
+    
+    #"""
+                                    ______
+                            jgs    /     /\
+                                  /     /  \
+                                 /_____/----\_    (
+                                "     "          ).
+                               _ ___          o (:') o
+                              (@))_))        o ~/~~\~ o
+                                              o  o  o
+"""#
+    
+    print(ForegroundColor(.green, fogueira))
     
     da_enter()
+    
     print("""
     \(narrador)Depois de uns 15 minutos, o sol já se pôs totalmente, a única iluminação que resta é a da Lua cheia e do fogo que você e Marina acenderam. Nenhum de seus amigos voltaram ainda e você começa a questionar se eles estão bem.
     """)
