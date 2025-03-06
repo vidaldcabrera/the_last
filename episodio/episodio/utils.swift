@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Prism
 func cria_personagem() -> String {
     /*
      Obtem o nome do personagem
@@ -18,7 +19,7 @@ func cria_personagem() -> String {
         print("Por favor, entre com outro nome")
         nome_personagem = readLine()!.uppercased()
     }
-    return nome_personagem
+    return nome_personagem.foregroundColor(.green)
 }
 
 func confere_input() -> String {
@@ -44,6 +45,7 @@ func confere_input() -> String {
     return decisao
 }
 
+
 func delay_dialogo(dialogo:Array<String>) {
     for fala in dialogo {
         print(fala)
@@ -57,7 +59,6 @@ func da_enter() {
 }
 
 func fim_jogo() {
-    //let mensagem = ["F", "I", "M", " D", "E", " J", "O", "G", "O"]
     let fim_ascii = """
 
 
@@ -72,11 +73,7 @@ func fim_jogo() {
                                                                                                                                     
 
 """
-    print(fim_ascii)
-    //for char in mensagem {
-    //print(char, terminator: "")
-    //usleep(200000)
-//}
+    print(ForegroundColor(.red, fim_ascii))
 }
 
 func anda_carro() {
@@ -135,5 +132,3 @@ func anda_carro() {
         usleep(500000)
     }
 }
-
-
