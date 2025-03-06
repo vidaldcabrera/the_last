@@ -410,6 +410,34 @@ func caverna_rota_desviada() {
     print("""
     \(narrador)Você entra na caverna e ainda não encontra ninguém. As paredes apresentam padrões estranhos, definitivamente desenhados por alguém. A caverna é mais profunda do que parecia, e você continua a explora-la. Ha roupas e vestígios de que alguém esteve por la, mas ainda nada de seus amigos. Entre os pertences, você identifica o boné do Pedro. As roupas que encontrou estavam estranhamente jogadas. Ao ver de perto percebe que estavam rasgadas, sujas. Você se abaixa e vê que entre elas, estavam as roupas de seus amigos também. Algo parece obstruir a luz que iluminava a caverna. Uma sombra rapidamente aumenta sobre você, e o mesmo barulho do animal ouvido por vocês na estrada é o ultimo que você escuta antes que suas garras te alcancem.
     """)
+    let fim_monstro =
+    #"""
+                                                 ,--,  ,.-.
+                   ,                   \,       '-,-`,'-.' | ._
+                  /|           \    ,   |\         }  )/  / `-,',
+                  [ ,          |\  /|   | |        /  \|  |/`  ,`
+                  | |       ,.`  `,` `, | |  _,...(   (      .',
+                  \  \  __ ,-` `  ,  , `/ |,'      Y     (   /_L\
+                   \  \_\,``,   ` , ,  /  |         )         _,/
+                    \  '  `  ,_ _`_,-,<._.<        /         /
+                     ', `>.,`  `  `   ,., |_      |         /
+                       \/`  `,   `   ,`  | /__,.-`    _,   `\
+                   -,-..\  _  \  `  /  ,  / `._) _,-\`       \
+                    \_,,.) /\    ` /  / ) (-,, ``    ,        |
+                   ,` )  | \_\       '-`  |  `(               \
+                  /  /```(   , --, ,' \   |`<`    ,            |
+                 /  /_,--`\   <\  V /> ,` )<_/)  | \      _____)
+           ,-, ,`   `   (_,\ \    |   /) / __/  /   `----`
+          (-, \           ) \ ('_.-._)/ /,`    /
+          | /  `          `/ \\ V   V, /`     /
+       ,--\(        ,     <_/`\\     ||      /
+      (   ,``-     \/|         \-A.A-`|     /
+     ,>,_ )_,..(    )\          -,,_-`  _--`
+    (_ \|`   _,/_  /  \_            ,--`
+     \( `   <.,../`     `-.._   _,-`
+"""#
+    print(ForegroundColor(.green, fim_monstro))
+    da_enter()
     fim_jogo()
 }
 
@@ -516,5 +544,33 @@ func nao_abrir() {
     print("""
     \(narrador)Você opta, com medo, a não abrir o diário. De repente a floresta fica completamente silenciosa, não é possível escutar absolutamente nada, nem mesmo o barulho do vento que estava tão forte. Você olha pela janela do farol mas tudo está muito escuro lá fora. Então, você se vira de costas para a janela. Algo parece obstruir a lâmpada que iluminava o farol. Uma sombra rapidamente aumenta sobre você, e o mesmo barulho do animal ouvido por vocês na estrada é o ultimo que você escuta antes que suas garras te alcancem.
 """)
+    let fim_monstro =
+    #"""
+                                                 ,--,  ,.-.
+                   ,                   \,       '-,-`,'-.' | ._
+                  /|           \    ,   |\         }  )/  / `-,',
+                  [ ,          |\  /|   | |        /  \|  |/`  ,`
+                  | |       ,.`  `,` `, | |  _,...(   (      .',
+                  \  \  __ ,-` `  ,  , `/ |,'      Y     (   /_L\
+                   \  \_\,``,   ` , ,  /  |         )         _,/
+                    \  '  `  ,_ _`_,-,<._.<        /         /
+                     ', `>.,`  `  `   ,., |_      |         /
+                       \/`  `,   `   ,`  | /__,.-`    _,   `\
+                   -,-..\  _  \  `  /  ,  / `._) _,-\`       \
+                    \_,,.) /\    ` /  / ) (-,, ``    ,        |
+                   ,` )  | \_\       '-`  |  `(               \
+                  /  /```(   , --, ,' \   |`<`    ,            |
+                 /  /_,--`\   <\  V /> ,` )<_/)  | \      _____)
+           ,-, ,`   `   (_,\ \    |   /) / __/  /   `----`
+          (-, \           ) \ ('_.-._)/ /,`    /
+          | /  `          `/ \\ V   V, /`     /
+       ,--\(        ,     <_/`\\     ||      /
+      (   ,``-     \/|         \-A.A-`|     /
+     ,>,_ )_,..(    )\          -,,_-`  _--`
+    (_ \|`   _,/_  /  \_            ,--`
+     \( `   <.,../`     `-.._   _,-`
+"""#
+    print(ForegroundColor(.green, fim_monstro))
+    da_enter()
     fim_jogo()
 }
