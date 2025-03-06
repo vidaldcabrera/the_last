@@ -104,7 +104,7 @@ func anda_carro() {
 ]
     
     for carro in carros {
-        print(carro)
+        print(ForegroundColor(.green, carro))
         usleep(500000)
     }
 }
