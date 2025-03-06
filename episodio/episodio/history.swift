@@ -1,9 +1,27 @@
 import Foundation
+import Prism
 
 var pula:String = "\n"
 let separador:String = "\n\t\t\t\t\t\t\t\t----------PRESSIONE ENTER----------"
+
+let pedro = Prism {
+    Bold {
+        ForegroundColor(.cyan) {
+                "PEDRO"
+        }
+    }
+}
+
+let marina = Prism {
+    Bold {
+        ForegroundColor(.magenta) {
+                "MARINA"
+        }
+    }
+}
+
 func imprime_cap1(nome:String) {
-    print("Capítulo 1. A viagem.")
+    print(ForegroundColor(.yellow, "Capítulo 1. A viagem."))
     print("""
     Numa sexta-feria ao entardecer, você e seus amigos estão indo acampar de carro. Sem perceber, entraram numa estrada perigosa e o sinal GPS começa falhar. Assustados, vocês tentam voltar ao caminho, mas acabam se perdendo. Ainda sem muita certeza de onde estão, seu GPS volta a funcionar e recalcula a rota.
     """)
@@ -11,22 +29,26 @@ func imprime_cap1(nome:String) {
     anda_carro()
     da_enter()
     print("""
-    Depois de um tempo nesse ‘novo’ caminho, passa subitamente no meio da estrada o que parece ser um animal, correndo em direção ao local que vocês precisam seguir. Você freia o carro bruscamente e escutam galhos se quebrando, parece ser algo ou alguém muito grande, mas vocês não conseguem identificar o que é.
+    Depois de um tempo nesse ‘novo’ caminho, passa subitamente no meio da estrada o que parece ser um animal, correndo em direção ao local que vocês precisam seguir. \(nome) freia o carro bruscamente e escutam galhos se quebrando, parece ser algo ou alguém muito grande, mas vocês não conseguem identificar o que é.
     """)
     da_enter()
-    let dialogo = ["PEDRO: ‘Meu Deus! Que bizarro, o que é isso?’",
-                   "MARINA: ‘Para de ser medroso, é só um bichinho.’",
-                   "PEDRO: 'Bichinho? É quase um leão!'",
-                   "MARINA: 'Ah, como eu achei que ia dar certo acampar na natureza com alguém com medo até do barulho do vento? Só segue o caminho aí.'",
-                   "PEDRO: 'Não cara, é um barulho meio preocupante mesmo! Como a gente já está perto, podemos ir para o outro lado e acampar por lá mesmo. Né, \(nome)?"]
+    let dialogo = [
+    "\(pedro): ‘Meu Deus! Que bizarro, o que é isso?’",
+    "\(marina): ‘Para de ser medroso, é só um bichinho.’",
+    "\(pedro): 'Bichinho? É quase um leão!'",
+    "\(marina): 'Ah, como eu achei que ia dar certo acampar na natureza com alguém com medo até do barulho do vento? Só segue o caminho aí.'",
+    "\(pedro): 'Não cara, é um barulho meio preocupante mesmo! Como a gente já está perto, podemos ir para o outro lado e acampar por lá mesmo. Né, \(nome)?"]
     delay_dialogo(dialogo: dialogo)
     da_enter()
     print("""
-        Pedro, assustado, sugere desviar da rota e seguir para um local mais silencioso. Já Marina prefere seguir a rota planejada.\n\tCabe a você, \(nome), desempatar a decisão. O que você prefere?\n\t\t- Digite 1 para desviar da rota 🛣\n\t\t- Digite 2 para seguir o caminho planejado 🗺
+    Pedro, assustado, sugere desviar da rota e seguir para um local mais silencioso. Já Marina prefere seguir a rota planejada.\n\tCabe a você, \(nome), desempatar a decisão. O que você prefere?
+    \(ForegroundColor(.red, "- Digite 1 para desviar da rota 🛣"))
+    \(ForegroundColor(.red, "- Digite 2 para seguir o caminho planejado 🗺"))
     """)
 }
 
 func capitulo_2(nome:String, escolha:String) {
+    print(ForegroundColor(.yellow, "Capítulo 2. A floresta."))
     if escolha == "1" {
         // opcao escolhida: desviar a rota
         desvia_rota(nome: nome)
@@ -40,16 +62,17 @@ func capitulo_2(nome:String, escolha:String) {
 
 func desvia_rota(nome:String) {
     print("""
-        Vocês seguem para o caminho oposto ao barulho. Por fim, você e seus amigos chegam em um local silencioso. Está um belo por do sol adiante, vocês estão rodeados por árvores e um extenso rio está próximo, mas não conseguem ver muito mais que isso. Parecem estar completamente sozinhos.
-            Você e Marina instalam as barracas antes do sol se por completamente, enquanto Pedro vai lavar o rosto no rio para relaxar depois desse trajeto tortuoso. Passam-se uns 10 minutos, e nada do Pedro.
+    Vocês seguem para o caminho oposto ao barulho. Por fim, você e seus amigos chegam em um local silencioso. Está um belo por do sol adiante, vocês estão rodeados por árvores e um extenso rio está próximo, mas não conseguem ver muito mais que isso. Parecem estar completamente sozinhos.
+    Você e Marina instalam as barracas antes do sol se por completamente, enquanto Pedro vai lavar o rosto no rio para relaxar depois desse trajeto tortuoso. Passam-se uns 10 minutos, e nada do Pedro.
     """)
     da_enter()
     
-    let dialogo = ["VOCÊ: “Cadê o Pedro? Não consigo vê-lo e ele ainda não voltou…”",
-                   "MARINA: “Não sei, vamos esperar que logo ele volta. Vamos acendendo uma fogueira enquanto isso, está começando a esfriar.”",
-                   "Você concorda, mas continua ansioso com a demora do Pedro. Passam-se mais uns 30 minutos e nada dele.",
-                   "MARINA: “Estou achando que o Pedro se perdeu, ele é muito atrapalhado, não faz nada direito. Vou procurar ele enquanto ainda não escureceu totalmente. Fica aqui cuidando das coisas, ok?”",
-                   "VOCÊ: “Beleza”"]
+    let dialogo = [
+    "VOCÊ: “Cadê o Pedro? Não consigo vê-lo e ele ainda não voltou…”",
+    "MARINA: “Não sei, vamos esperar que logo ele volta. Vamos acendendo uma fogueira enquanto isso, está começando a esfriar.”",
+    "Você concorda, mas continua ansioso com a demora do Pedro. Passam-se mais uns 30 minutos e nada dele.",
+    "MARINA: “Estou achando que o Pedro se perdeu, ele é muito atrapalhado, não faz nada direito. Vou procurar ele enquanto ainda não escureceu totalmente. Fica aqui cuidando das coisas, ok?”",
+    "VOCÊ: “Beleza”"]
     
     delay_dialogo(dialogo: dialogo)
     
