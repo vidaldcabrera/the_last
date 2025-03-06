@@ -193,6 +193,8 @@ func ficar_parado(nome:String) {
    """)
     da_enter()
 
+    caverna_ou_farol()
+
     print("""
     \(narrador)Para onde você deseja seguir?
     \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
@@ -209,6 +211,9 @@ func procurar_amigos(nome:String) {
     \(narrador)De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos.
     """)
     da_enter()
+
+    caverna_ou_farol()
+    
     print("""
     \(narrador)Para onde você deseja seguir?
     \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
@@ -276,6 +281,9 @@ func acampar_no_local(nome:String) {
     \(narrador)Você termina de montar o acampamento, porém, nenhum dos seus amigos voltou ainda e fica preocupado. Na distância, você consegue enxergar duas fontes de luz, uma proveniente de um farol e outra proveniente de uma caverna. A caverna, bastante luminosa, pelo que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos.
     """)
     da_enter()
+
+    caverna_ou_farol()
+    
     print("""
     \(narrador)Para onde você deseja seguir?
     \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
@@ -311,6 +319,9 @@ func continuar_rodando(nome:String) {
     \(narrador)Passou mais de 30 minutos e nenhum sinal dos seus amigos, você, desesperado, pensa em sair buscar eles. De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos.
     """)
     da_enter()
+
+    caverna_ou_farol()
+    
     print("""
     \(narrador)Para onde você deseja seguir?
         \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
