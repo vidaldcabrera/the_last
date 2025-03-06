@@ -117,7 +117,7 @@ func desvia_rota(nome:String) {
                             .'  '.            .' _.'
                           .'  .'  '__________'.-'
                         ~~~~~~~~~~~~~~~~~~~~~/
-                        ~~  ~~~    ~~~ ~~ ~ /jro
+                        ~~  ~~~    ~~~ ~~ ~ /
                           ~~   ~~~~  ~~~~ ~/
 
     """#
@@ -138,7 +138,7 @@ func desvia_rota(nome:String) {
         
         #"""
                                         ______
-                                jgs    /     /\
+                                       /     /\
                                       /     /  \
                                      /_____/----\_    (
                                     "     "          ).
@@ -189,12 +189,13 @@ func ficar_parado(nome:String) {
     \(narrador)De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos.
    """)
     da_enter()
-    caverna_ou_farol()
     print("""
     \(narrador)Para onde você deseja seguir?
     \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
     \(ForegroundColor(.red, "- Digite 2 para seguir para o farol 🗼"))
    """)
+    caverna_ou_farol()
+
 }
 
 func procurar_amigos(nome:String) {
@@ -206,12 +207,13 @@ func procurar_amigos(nome:String) {
     \(narrador)De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos.
     """)
     da_enter()
-    caverna_ou_farol()
     print("""
     \(narrador)Para onde você deseja seguir?
     \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
     \(ForegroundColor(.red, "- Digite 2 para seguir para o farol 🗼"))
     """)
+    caverna_ou_farol()
+
 }
 
 
@@ -273,13 +275,28 @@ func acampar_no_local(nome:String) {
     print("""
     \(narrador)Você termina de montar o acampamento, porém, nenhum dos seus amigos voltou ainda e fica preocupado. Na distância, você consegue enxergar duas fontes de luz, uma proveniente de um farol e outra proveniente de uma caverna. A caverna, bastante luminosa, pelo que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos.
     """)
+    let fogueira =
+        
+        #"""
+                                        ______
+                                       /     /\
+                                      /     /  \
+                                     /_____/----\_    (
+                                    "     "          ).
+                                   _ ___          o (:') o
+                                  (@))_))        o ~/~~\~ o
+                                                  o  o  o
+    """#
+        
+    print(ForegroundColor(.green, fogueira))
     da_enter()
-    caverna_ou_farol()
     print("""
     \(narrador)Para onde você deseja seguir?
     \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
     \(ForegroundColor(.red, "- Digite 2 para seguir para o farol 🗼"))
     """)
+     caverna_ou_farol()
+
 }
 
 func continuar_rodando(nome:String) {
@@ -305,17 +322,33 @@ func continuar_rodando(nome:String) {
     
     delay_dialogo(dialogo: dialogo)
 
+    let fogueira =
+        
+        #"""
+                                        ______
+                                       /     /\
+                                      /     /  \
+                                     /_____/----\_    (
+                                    "     "          ).
+                                   _ ___          o (:') o
+                                  (@))_))        o ~/~~\~ o
+                                                  o  o  o
+    """#
+        
+    print(ForegroundColor(.green, fogueira))
+
     da_enter()
     print("""
     \(narrador)Passou mais de 30 minutos e nenhum sinal dos seus amigos, você, desesperado, pensa em sair buscar eles. De lá, você vê apenas duas informações: de um lado vê um ponto de luz saindo de uma pequena caverna, bastante luminosa, que parece ser outra fogueira. Pode ser que haja gente acampando ali também, talvez possam ser de ajuda, mas o caminho até ali é completamente escuro, com muitas pedras e alguns vultos se movendo rapidamente por ali. No outro lado você vê um alto farol de vigilância florestal, bem mais visível, porém muito velho e com aparência de abandonado há muitos anos.
     """)
     da_enter()
-    caverna_ou_farol()
     print("""
     \(narrador)Para onde você deseja seguir?
         \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
         \(ForegroundColor(.red, "- Digite 2 para seguir para o farol 🗼"))
     """)
+    caverna_ou_farol()
+
 }
 
 func capitulo_3_desvia(nome:String, decisao:String) {
@@ -394,12 +427,13 @@ func caverna_manteve_rota(){
     \(narrador)Chegando próximo a caverna, você começa a buscar por algum sinal de seus amigos, e vê algumas pegadas no lama no chão. São pegadas de pessoas e outras maiores, que você não consegue identificar do que seria. Está frio e escuro, a floresta parece mais silenciosa que o normal. Não ha sons de animais próximos, e a única fonte de luz vem de dentro da caverna. Enquanto você corre até ela, encontra a blusa de marina no chão. ela nunca a perderia. Você se apressa para poder se abrigar e assim procura-los antes que algo pior aconteça. Na entrada da caverna, a luz se intensifica, sem ficar muito claro de onde ela vem.
     """)
     da_enter()
-    caverna_ou_farol()
     print("""
     \(narrador)Com um certo receio, você repensa adentra-la, ou ir ate o farol buscar ajuda, já que não escuta a voz ou a presença de ninguém.
         \(ForegroundColor(.red, "- Digite 1 para seguir para a caverna 🗿"))
         \(ForegroundColor(.red, "- Digite 2 para seguir para o farol 🗼"))
     """)
+    caverna_ou_farol()
+
     let escolha = confere_input()
     if escolha == "1" {
         caverna_rota_desviada()
