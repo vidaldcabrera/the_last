@@ -7,16 +7,34 @@
 
 import Foundation
 import Prism
+
+func imprime_historia() {
+    
+    let historia_ascii = """
+
+    ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░      ░▒▓█▓▒░       ░▒▓██████▓▒░ ░▒▓███████▓▒░▒▓████████▓▒░
+       ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░         ░▒▓█▓▒░
+       ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░         ░▒▓█▓▒░
+       ░▒▓█▓▒░   ░▒▓████████▓▒░▒▓██████▓▒░        ░▒▓█▓▒░      ░▒▓████████▓▒░░▒▓██████▓▒░   ░▒▓█▓▒░
+       ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░
+       ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░
+       ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░      ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░   ░▒▓█▓▒░
+                                                                                                                                    
+"""
+    print(ForegroundColor(.red, historia_ascii))
+    
+}
+
 func cria_personagem() -> String {
     /*
      Obtem o nome do personagem
      */
-    print("Entre com o nome do personagem.")
+    print("Entre com o nome do personagem:")
 
     var nome_personagem : String = readLine()!.uppercased()
 
     while (nome_personagem == "PEDRO") || (nome_personagem == "MARINA") {
-        print("Por favor, entre com outro nome")
+        print("Por favor, entre com outro nome:")
         nome_personagem = readLine()!.uppercased()
     }
     return nome_personagem.foregroundColor(.green)
@@ -78,7 +96,7 @@ func fim_jogo() {
 
 func anda_carro() {
     let carros = ["""
- _______
+    _______
    /______/"=,
   [     | "=, "=,,
   [-----+----"=,* )
@@ -86,7 +104,7 @@ func anda_carro() {
     (O)     (O)
 """,
 """
-\t\t\t\t\t\t_______
+\t\t\t\t\t\t\t_______
 \t\t\t\t\t\t\t/______/"=,
 \t\t\t\t\t\t\t[     | "=, "=,,
 \t\t\t\t\t\t\t[-----+----"=,* )
@@ -94,7 +112,7 @@ func anda_carro() {
 \t\t\t\t\t\t\t  (O)     (O)
 """,
 """
-\t\t\t\t\t\t\t\t\t\t\t\t\t_______
+    \t\t\t\t\t\t\t\t\t\t\t\t\t\t_______
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t/______/"=,
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t[     | "=, "=,,
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t[-----+----"=,* )
@@ -107,6 +125,45 @@ func anda_carro() {
         print(ForegroundColor(.green, carro))
         usleep(500000)
     }
+}
+
+func imprime_titulo_cap1() {
+    let titulo = #"""
+   ____            _ _         _         _        _            _
+  / ___|__ _ _ __ (_) |_ _   _| | ___   / |      / \    __   _(_) __ _  __ _  ___ _ __ ___
+ | |   / _` | '_ \| | __| | | | |/ _ \  | |     / _ \   \ \ / / |/ _` |/ _` |/ _ \ '_ ` _ \
+ | |__| (_| | |_) | | |_| |_| | | (_) | | |_   / ___ \   \ V /| | (_| | (_| |  __/ | | | | |
+  \____\__,_| .__/|_|\__|\__,_|_|\___/  |_(_) /_/   \_\   \_/ |_|\__,_|\__, |\___|_| |_| |_|
+            |_|                                                        |___/
+"""#
+    print(ForegroundColor(.yellow, titulo))
+}
+
+func imprime_titulo_cap2() {
+    let titulo = #"""
+   ____            _ _         _         ____         _       __ _                     _
+  / ___|__ _ _ __ (_) |_ _   _| | ___   |___ \       / \     / _| | ___  _ __ ___  ___| |_ __ _
+ | |   / _` | '_ \| | __| | | | |/ _ \    __) |     / _ \   | |_| |/ _ \| '__/ _ \/ __| __/ _` |
+ | |__| (_| | |_) | | |_| |_| | | (_) |  / __/ _   / ___ \  |  _| | (_) | | |  __/\__ \ || (_| |
+  \____\__,_| .__/|_|\__|\__,_|_|\___/  |_____(_) /_/   \_\ |_| |_|\___/|_|  \___||___/\__\__,_|
+            |_|
+"""#
+    print(ForegroundColor(.yellow, titulo))
+}
+
+
+func imprime_titulo_cap3() {
+    let titulo = #"""
+   ____            _ _         _         _____     ___        _            __           _
+  / ___|__ _ _ __ (_) |_ _   _| | ___   |___ /    / _ \    __| | ___  ___ / _| ___  ___| |__   ___
+ | |   / _` | '_ \| | __| | | | |/ _ \    |_ \   | | | |  / _` |/ _ \/ __| |_ / _ \/ __| '_ \ / _ \
+ | |__| (_| | |_) | | |_| |_| | | (_) |  ___) |  | |_| | | (_| |  __/\__ \  _|  __/ (__| | | | (_) |
+  \____\__,_| .__/|_|\__|\__,_|_|\___/  |____(_)  \___/   \__,_|\___||___/_|  \___|\___|_| |_|\___/
+            |_|
+
+
+"""#
+    print(ForegroundColor(.yellow, titulo))
 }
 
 func caverna_ou_farol( ) {
@@ -162,4 +219,3 @@ func caverna_ou_farol( ) {
     
     print(ForegroundColor(.green, caverna_ou_farol))
 }
-
