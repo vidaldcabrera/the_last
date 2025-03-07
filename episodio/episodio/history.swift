@@ -356,7 +356,7 @@ func capitulo_3_desvia(nome:String, decisao:String) {
 }
 
 func capitulo_3_segue(nome:String, decisao:String) {
-    print(ForegroundColor(.yellow, "Capítulo 3. O desfecho."))
+    imprime_titulo_cap3()
     // Caverna
     if decisao == "1" {
         caverna_manteve_rota()
